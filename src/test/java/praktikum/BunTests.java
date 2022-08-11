@@ -3,9 +3,9 @@ package praktikum;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class BunTest {
+public class BunTests {
 
-    Bun bun = new Bun("бриошь", (float) 15.56);
+    Bun bun = new Bun("бриошь",15.56f);
 
     @Test
     public void getBunNameTest() {
@@ -20,7 +20,7 @@ public class BunTest {
     @Test
     public void getBunPriceTest() {
         // Arrange
-        float expectedPrice = (float) 15.56;
+        float expectedPrice = 15.56f;
         // Act
         float actualPrice = bun.getPrice();
         // Assert

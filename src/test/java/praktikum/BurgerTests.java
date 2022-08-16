@@ -1,21 +1,14 @@
 package praktikum;
 
-import org.hamcrest.core.IsEqual;
-import org.hamcrest.core.IsNot;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -66,10 +59,8 @@ public class BurgerTests {
         burger.addIngredient(ingredient1);
         burger.addIngredient(ingredient2);
         List<Ingredient> actualIngredients = new ArrayList<>(burger.ingredients);
-        System.out.println(actualIngredients.get(1));
         burger.moveIngredient(1, 0);
         List<Ingredient> expectedIngredients = burger.ingredients;
-        System.out.println(expectedIngredients.get(0));
         // Assert
         Assert.assertEquals(expectedIngredients.get(0), actualIngredients.get(1));
     }

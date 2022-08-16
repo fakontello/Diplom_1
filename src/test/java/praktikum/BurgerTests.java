@@ -1,11 +1,22 @@
 package praktikum;
 
+import org.hamcrest.core.IsEqual;
+import org.hamcrest.core.IsNot;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTests {
@@ -38,23 +49,29 @@ public class BurgerTests {
         // Arrange
         Ingredient ingredient = new Ingredient(IngredientType.FILLING, "лучок", 37);
         // Act
+        Burger burger = new Burger();
         burger.addIngredient(ingredient);
         burger.removeIngredient(0);
         // Assert
-        Mockito.verify(burger).removeIngredient(0);
+        assertTrue(burger.ingredients.isEmpty());
     }
 
     @Test
     public void MoveIngredientTest() {
         // Arrange
+        Burger burger = new Burger();
         Ingredient ingredient1 = new Ingredient(IngredientType.FILLING, "лучок", 37);
         Ingredient ingredient2 = new Ingredient(IngredientType.SAUCE, "мазик", 6);
         // Act
         burger.addIngredient(ingredient1);
         burger.addIngredient(ingredient2);
+        List<Ingredient> actualIngredients = new ArrayList<>(burger.ingredients);
+        System.out.println(actualIngredients.get(1));
         burger.moveIngredient(1, 0);
+        List<Ingredient> expectedIngredients = burger.ingredients;
+        System.out.println(expectedIngredients.get(0));
         // Assert
-        Mockito.verify(burger).moveIngredient(1, 0);
+        Assert.assertEquals(expectedIngredients.get(0), actualIngredients.get(1));
     }
 
     @Test

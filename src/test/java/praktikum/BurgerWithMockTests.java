@@ -13,7 +13,7 @@ public class BurgerWithMockTests {
     Burger burger;
 
     @Test
-    public void SetBunsTest() {
+    public void setBunsTest() {
         // Arrange
         Bun bun = new Bun("с кунжутом", 12);
         // Act
@@ -23,7 +23,7 @@ public class BurgerWithMockTests {
     }
 
     @Test
-    public void AddIngredientTest() {
+    public void sddIngredientTest() {
         // Arrange
         Ingredient ingredient = new Ingredient(IngredientType.SAUCE, "кепчук", 56);
         // Act

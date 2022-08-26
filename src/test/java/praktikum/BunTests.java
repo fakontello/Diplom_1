@@ -14,7 +14,7 @@ public class BunTests {
         // Act
         String actualName = bun.getName();
         // Assert
-        Assert.assertEquals(actualName, expectedName);
+        Assert.assertEquals(expectedName, actualName);
     }
 
     @Test
@@ -24,7 +24,7 @@ public class BunTests {
         // Act
         float actualPrice = bun.getPrice();
         // Assert
-        Assert.assertEquals(actualPrice, expectedPrice,0);
+        Assert.assertEquals(expectedPrice, actualPrice,0);
     }
 
 }

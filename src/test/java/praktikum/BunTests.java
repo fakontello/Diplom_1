@@ -8,7 +8,7 @@ public class BunTests {
     Bun bun = new Bun("бриошь",15.56f);
 
     @Test
-    public void getBunNameTest() {
+    public void getBunName() {
         // Arrange
         String expectedName = "бриошь";
         // Act
@@ -18,7 +18,7 @@ public class BunTests {
     }
 
     @Test
-    public void getBunPriceTest() {
+    public void getBunPrice() {
         // Arrange
         float expectedPrice = 15.56f;
         // Act

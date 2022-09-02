@@ -10,7 +10,7 @@ import static org.junit.Assert.assertTrue;
 public class BurgerTests {
 
     @Test
-    public void removeIngredientTest() {
+    public void removeIngredient() {
         // Arrange
         Ingredient ingredient = new Ingredient(IngredientType.FILLING, "лучок", 37);
         // Act
@@ -22,7 +22,7 @@ public class BurgerTests {
     }
 
     @Test
-    public void moveIngredientTest() {
+    public void moveIngredient() {
         // Arrange
         Burger burger = new Burger();
         Ingredient ingredient1 = new Ingredient(IngredientType.FILLING, "лучок", 37);
@@ -38,7 +38,7 @@ public class BurgerTests {
     }
 
     @Test
-    public void getPriceTest() {
+    public void getPrice() {
         // Arrange
         Bun bun = new Bun("с кунжутом", 12);
         Ingredient ingredient = new Ingredient(IngredientType.SAUCE, "мазик", 6);
@@ -53,7 +53,7 @@ public class BurgerTests {
     }
 
     @Test
-    public void getReceiptTest() {
+    public void getReceipt() {
         // Arrange
         Bun bun = new Bun("с кунжутом", 12);
         Ingredient ingredient = new Ingredient(IngredientType.SAUCE, "мазик", 6);

@@ -27,7 +27,7 @@ public class IngredientsTest {
     }
 
     @Test
-    public void ingredientConstructorTest() {
+    public void ingredientsConstructorShouldSetsProperly() {
         Ingredient ingredient = new Ingredient(type, name, price);
 
         String actualName = ingredient.getName();

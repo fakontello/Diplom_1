@@ -28,7 +28,7 @@ public class BurgerTests {
     }
 
     @Test
-    public void setBuns() {
+    public void setBunsInBurger() {
         // Act
         burger.setBuns(bun);
         // Assert
@@ -36,7 +36,7 @@ public class BurgerTests {
     }
 
     @Test
-    public void addIngredient() {
+    public void addIngredientToBurger() {
         // Act
         burger.addIngredient(ingredient);
         // Assert
@@ -44,7 +44,7 @@ public class BurgerTests {
     }
 
     @Test
-    public void getPrice() {
+    public void getPriceOfBurgerBuns() {
         burger.setBuns(bun);
         burger.addIngredient(ingredient);
         Mockito.when(bun.getPrice()).thenReturn(200F);
@@ -53,7 +53,7 @@ public class BurgerTests {
     }
 
     @Test
-    public void removeIngredient() {
+    public void removeIngredientFromBurger() {
         // Act
         burger.addIngredient(ingredient);
         burger.removeIngredient(0);
@@ -62,7 +62,7 @@ public class BurgerTests {
     }
 
     @Test
-    public void getReceipt() {
+    public void getReceiptForBurger() {
         // Arrange
         burger.setBuns(bun);
         burger.addIngredient(ingredient);
@@ -79,7 +79,7 @@ public class BurgerTests {
     }
 
     @Test
-    public void moveIngredient() {
+    public void moveIngredientFromOnePlaceToAnother() {
         // Act
         burger.addIngredient(ingredient);
         burger.addIngredient(ingredient1);

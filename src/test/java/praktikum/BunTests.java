@@ -3,12 +3,12 @@ package praktikum;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class BunTest {
+public class BunTests {
 
-    Bun bun = new Bun("бриошь", (float) 15.56);
+    Bun bun = new Bun("бриошь",15.56f);
 
     @Test
-    public void getBunNameTest() {
+    public void getBunName() {
         // Arrange
         String expectedName = "бриошь";
         // Act
@@ -18,13 +18,13 @@ public class BunTest {
     }
 
     @Test
-    public void getBunPriceTest() {
+    public void getBunPrice() {
         // Arrange
-        float expectedPrice = (float) 15.56;
+        float expectedPrice = 15.56f;
         // Act
         float actualPrice = bun.getPrice();
         // Assert
-        Assert.assertEquals(expectedPrice, actualPrice, 0);
+        Assert.assertEquals(expectedPrice, actualPrice,0);
     }
 
 }
